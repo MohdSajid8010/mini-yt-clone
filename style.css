@@ -1,0 +1,161 @@
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 20px 10px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    width: 70vw;
+    margin: auto;
+}
+
+.input {
+    display: flex;
+    position: relative;
+}
+
+.search-container input {
+    background-color: #F0F3F4;
+    border: none;
+    flex-grow: 1;
+    padding: 16px 10px;
+    border-radius: 10px;
+    padding-left: 100px;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
+.search-container span {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.chips-container {
+    display: flex;
+    margin: 10px 0;
+    overflow-x: scroll;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.chips-container::-webkit-scrollbar {
+    /* display: none; */
+}
+
+.chip {
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.5s;
+    margin-top: 10px;
+}
+
+.chip:hover {
+    scale: 1.1;
+}
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    border: 2px solid red;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 10px;
+    border-radius: 10px;
+    gap: 20px;
+    color: white;
+    transition: 0.3s;
+    border: 2px solid red;
+
+}
+
+.thumbnail {
+    border-radius: 10px;
+    height: 170px;
+
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.views-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    color: #D9D9D9;
+    font-size: 13px;
+}
+
+.channel-title {
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.video:hover {
+    transform: scaleX(1.041) scaleY(1.041);
+    cursor: pointer;
+}
+
+@media (max-width:1125px)
+{
+    
+.search-container {
+    width: 90vw;
+}
+
+   
+}
+
+@media (max-width:820px)
+{
+    
+.search-container {
+    width: 80vw;
+}
+
+    .videos-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:400px)
+{
+    
+.search-container {
+    width: 90vw;
+}
+
+    .videos-container {
+        grid-template-columns: 1fr;
+    }
+}
